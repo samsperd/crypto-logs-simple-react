@@ -1,6 +1,6 @@
 # Getting Started with Create React App
 
-This project is a crypto web application inspired by a tutorial video of [https://github.com/adrianhajdin/project_cryptoverse](Cryptoverse) Project. It was built with Ant design, Redux Toolkit, React Router Dom, Chart.js, Axios and Millify.
+This project is a crypto web application inspired by a tutorial video of [Cryptoverse](https://github.com/adrianhajdin/project_cryptoverse) Project. It was built with Ant design, Redux Toolkit, React Router Dom, Chart.js, Axios and Millify.
 
 ## Available Scripts
 
