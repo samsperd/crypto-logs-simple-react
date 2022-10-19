@@ -14,17 +14,13 @@ const Homepage = () => {
   const { data, isFetching } = useGetCryptosQuery(10);
   const globalStats = data?.data?.stats;
 
-  let information;
-
   if (isFetching) {
     return <Loader></Loader>;
   }
-  else {
-    if (!globalStats) {
-      information = (<Loader></Loader>);
-    } else {
-      information = (
-        <>
+  
+
+  return (
+    <>
           <Title level={2} className="heading">
             Global Crypto Stats
           </Title>
@@ -33,7 +29,7 @@ const Homepage = () => {
               <Statistic title="Total Cryptocurrencies" value={globalStats.total} ></Statistic>
             </Col>
             <Col span={12}>
-              <Statistic title="Total Exchanges" value={millify(globalStats.totalExchanges)} ></Statistic>
+              <Statistic title="Total Exchanges" value={globalStats.totalExchanges} ></Statistic>
             </Col>
             <Col span={12}>
               <Statistic title="Total Market Cap" value={millify(globalStats.totalMarketCap)} ></Statistic>
@@ -42,7 +38,7 @@ const Homepage = () => {
               <Statistic title="Total 24h Volume" value={millify(globalStats.total24hVolume)} ></Statistic>
             </Col>
             <Col span={12}>
-              <Statistic title="Total Markets" value={millify(globalStats.totalMarkets)} ></Statistic>
+              <Statistic title="Total Markets" value={globalStats.totalMarkets} ></Statistic>
             </Col>
           </Row>
           <div className="home-heading-container">
@@ -68,12 +64,7 @@ const Homepage = () => {
           </div>
           <News simplified></News>
         </>
-      );
-    }
-  }
 
-  return (
-    { information }
   );
 }
 
